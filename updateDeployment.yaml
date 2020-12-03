@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -31,5 +31,5 @@ spec:
           volumeAttributes:
             secretProviderClass: "azure-kvname"
           nodePublishSecretRef:                       # Only required when using service principal mode
-            name: secrets-store-creds                 # Only required when using service principal mode    
+            name: secrets-store-creds             # Only required when using service principal mode    
 
